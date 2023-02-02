@@ -23,14 +23,14 @@
 
         /* ID選取器(只可使用一次) */
         #xyz {
-            color: greenyellow;
+            color: greenyellow!important;
         }
 
         /* 
             CSS Specificity 權重
             權重越重，愈優先套用
             物以稀為貴
-            ID > Class > Tag
+            !important > 嵌入式 > ID > Class > Tag
 
             當權重相同時，則以先後順序判斷，後寫優先於先寫
         */
@@ -39,7 +39,7 @@
 <body>
     <h1 style="color:#ff2f86;">hello CSS</h1>
     <h2 class="abc xyz">Cascading Style Sheet</h2>
-    <p class="abc" id="xyz">
+    <p class="abc" id="xyz" style="color:#67008d">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad laboriosam, autem consequatur iure mollitia ipsam reiciendis dolor nulla sint explicabo, omnis architecto vitae odio eligendi repudiandae harum consectetur voluptate culpa.
     </p>
     <p>
