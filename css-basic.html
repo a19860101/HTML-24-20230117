@@ -17,17 +17,29 @@
         .abc {
             color:pink;
         }
+        .xyz {
+            color: #6262fe;
+        }
 
         /* ID選取器(只可使用一次) */
         #xyz {
             color: greenyellow;
         }
+
+        /* 
+            CSS Specificity 權重
+            權重越重，愈優先套用
+            物以稀為貴
+            ID > Class > Tag
+
+            當權重相同時，則以先後順序判斷，後寫優先於先寫
+        */
     </style>
 </head>
 <body>
     <h1 style="color:#ff2f86;">hello CSS</h1>
-    <h2 class="abc">Cascading Style Sheet</h2>
-    <p>
+    <h2 class="abc xyz">Cascading Style Sheet</h2>
+    <p class="abc" id="xyz">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad laboriosam, autem consequatur iure mollitia ipsam reiciendis dolor nulla sint explicabo, omnis architecto vitae odio eligendi repudiandae harum consectetur voluptate culpa.
     </p>
     <p>
@@ -39,7 +51,7 @@
     <ul>
         <li class="abc">嵌入式樣式</li>
         <li>內部樣式</li>
-        <li id="xyz">外部樣式</li>
+        <li>外部樣式</li>
     </ul>
 </body>
 </html>
